@@ -2,10 +2,16 @@ const express = require("express");
 const cors = require("cors");
 
 const { Sequelize, Model, DataTypes } = require("sequelize");
-const sequelize = new Sequelize("test", "root", "", {
-  host: "localhost",
-  dialect: "mysql",
-});
+const sequelize = new Sequelize(
+  "test",
+  "debian-sys-maint",
+  "JeAseyn7EWEvMyjD",
+  {
+    host: "localhost",
+    dialect: "mysql",
+  }
+);
+
 
 const Hello = sequelize.define("hello", {
   name: DataTypes.TEXT,
